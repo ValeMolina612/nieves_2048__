@@ -1,40 +1,49 @@
 # Nieves 2048
 
-Juego de fusión estilo 2048 con sabores de nieve de Dolores Hidalgo, construido 100% con TDD.
+Juego 2048 hecho en Flutter. El jugador mueve fichas, combina números iguales y suma puntos hasta llegar al valor objetivo.
 
-## Cómo usarlo
+## Cómo ejecutarlo
 
-1. Abre una terminal dentro de esta carpeta (`nieves_2048`).
-2. Genera las carpetas de plataforma (android, ios, etc.) sin tocar el código:
+```bash
+flutter pub get
+flutter run
+```
 
-       flutter create .
+Para ejecutar las pruebas:
 
-3. Descarga dependencias:
+```bash
+flutter test
+```
 
-       flutter pub get
+## Todas las pruebas
 
-4. Corre las pruebas (deben pasar 20 en verde):
+Se ejecutaron las siguientes 20 pruebas:
 
-       flutter test
+1. Mover a la izquierda modifica las cuatro filas.
+2. Mover a la derecha empuja las fichas al lado contrario.
+3. Mover arriba cambia las fichas de cada columna.
+4. Mover abajo empuja las fichas hacia la parte inferior.
+5. Agregar una ficha coloca exactamente una ficha nueva.
+6. No se agrega una ficha cuando el tablero está lleno.
+7. Hay movimientos disponibles cuando existe una celda vacía.
+8. Hay movimientos disponibles cuando se puede fusionar.
+9. No hay movimientos cuando el tablero está lleno y sin fusiones.
+10. Compactar una fila quita espacios y mantiene el orden.
+11. El jugador gana cuando una celda alcanza el objetivo.
+12. No se gana si ninguna celda alcanza el objetivo.
+13. Compactar una fila sin espacios no cambia su contenido.
+14. Fusionar una fila combina un par de números iguales.
+15. Tres números iguales no se fusionan más de una vez.
+16. Mover una fila a la izquierda compacta y fusiona.
+17. Una fila acomodada indica que no se movió.
+18. Un movimiento sin cambios no agrega una ficha.
+19. Alcanzar el valor objetivo cambia el estado a ganado.
+20. Una serie de movimientos combina fichas y suma puntos.
 
-5. Ejecuta el juego:
+Resultado final: **20 pruebas aprobadas**.
 
-       flutter run
+## Capturas reales de las pruebas
 
-## Estructura
-
-- `lib/logica/` — Dart puro (sin imports de Flutter): motor_2048, grid, direccion, estado_juego, motor_juego
-- `lib/presentation/juego_screen.dart` — interfaz con degradados y animaciones
-- `test/` — motor_2048_test, grid_test, motor_juego_test
-
-## Evidencia de pruebas
-
-La suite verifica movimientos, fusiones, puntuación, aparición de fichas y estados de victoria o derrota. Resultado: **20 pruebas aprobadas**.
-
-### Ciclo TDD: rojo a verde
-
-Ambas capturas fueron tomadas de ejecuciones reales en la terminal integrada de Visual Studio Code: la fase roja muestra `undefined_function` por código aún no implementado y la fase verde muestra la suite final aprobada.
-
-| 🔴 Prueba que solicita código faltante | 🟢 Implementación terminada |
+| Fase roja | Fase verde |
 |---|---|
-| ![Error real por código faltante en la terminal de VS Code](capturas/tdd_rojo_error.png) | ![Pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png) |
+| ![Error real en la terminal de VS Code](capturas/tdd_rojo_error.png) | ![20 pruebas aprobadas en la terminal de VS Code](capturas/pruebas_vscode.png) |
