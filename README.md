@@ -31,4 +31,10 @@ Juego de fusión estilo 2048 con sabores de nieve de Dolores Hidalgo, construido
 
 La suite verifica movimientos, fusiones, puntuación, aparición de fichas y estados de victoria o derrota. Resultado: **20 pruebas aprobadas**.
 
-![Pruebas de Flutter](capturas/pruebas_flutter.png)
+### Ciclo TDD: rojo a verde
+
+La captura roja reproduce de forma controlada el momento previo a implementar una regla; la verde corresponde a la suite final del repositorio.
+
+| 🔴 Prueba que solicita código faltante | 🟢 Implementación terminada |
+|---|---|
+| ![Fase roja](capturas/tdd_rojo_error.png) | ![Pruebas aprobadas](capturas/pruebas_flutter.png) |
