@@ -26,3 +26,9 @@ Juego de fusión estilo 2048 con sabores de nieve de Dolores Hidalgo, construido
 - `lib/logica/` — Dart puro (sin imports de Flutter): motor_2048, grid, direccion, estado_juego, motor_juego
 - `lib/presentation/juego_screen.dart` — interfaz con degradados y animaciones
 - `test/` — motor_2048_test, grid_test, motor_juego_test
+
+## Evidencia de pruebas
+
+La suite verifica movimientos, fusiones, puntuación, aparición de fichas y estados de victoria o derrota. Resultado: **20 pruebas aprobadas**.
+
+![Pruebas de Flutter](capturas/pruebas_flutter.png)
